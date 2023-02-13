@@ -1,27 +1,189 @@
-@article{LBM:Basagaoglu2017a,
-abstract = {This paper reports, for the first time, the computational performance of SequenceL for mesoscale simulations of large numbers of particles in a microfluidic device via the lattice-Boltzmann method. The performance of SequenceL simulations was assessed against the optimized serial and parallelized (via OpenMP directives) FORTRAN90 simulations. At present, OpenMP directives were not included in inter-particle and particle–wall repulsive (steric) interaction calculations due to difficulties that arose from inter-iteration dependencies between consecutive iterations of the do-loops. SequenceL simulations, on the other hand, relied on built-in automatic parallelism. Under these conditions, numerical simulations revealed that the parallelized FORTRAN90 outran the performance of SequenceL by a factor of 2.5 or more when the number of particles was 100 or less. SequenceL, however, outran the performance of the parallelized FORTRAN90 by a factor of 1.3 when the number of particles was 300. Our results show that when the number of particles increased by 30-fold, the computational time of SequenceL simulations increased linearly by a factor of 1.5, as compared to a 3.2-fold increase in serial and a 7.7-fold increase in parallelized FORTRAN90 simulations. Considering SequenceL's efficient built-in parallelism that led to a relatively small increase in computational time with increased number of particles, it could be a promising programming language for computationally-efficient mesoscale simulations of large numbers of particles in microfluidic experiments.},
-author = {Başağaoğlu, Hakan and Blount, Justin and Blount, Jarred and Nelson, Bryant and Succi, Sauro and Westhart, Phil M. and Harwell, John R.},
-nodoi = {10.1016/j.cpc.2016.12.012},
-file = {:home/jharwell/.local/share/data/Mendeley Ltd./Mendeley Desktop/Downloaded/Başağaoğlu et al. - 2017 - Computational performance of SequenceL coding of the lattice Boltzmann method for multi-particle flow simu.pdf:pdf},
-issn = {00104655},
-journal = {Computer Physics Communications},
-keywords = {Computational methods in fluid dynamics,Hydrodynamics,Lattice-Boltzmann,SequenceL},
-pages = {92--99},
-title = {{Computational performance of SequenceL coding of the lattice Boltzmann method for multi-particle flow simulations}},
-volume = {213},
-year = {2017}
+@inproceedings{Harwell:2023a-SIERRA,
+author = {Harwell, John and Lowmanstone, London and Gini, Maria},
+title = {{SIERRA}: A Modular Framework for Accelerating Research and Improving Reproducibility},
+year = {2023},
+booktitle={2023 International Conference on Robotics and Automation (ICRA)},
+pages = {XX-YY},
+abstract={We present SIERRA, a novel framework for accelerating development and
+  improving reproducibility of results in robotics research. SIERRA accelerates
+  research by automating the process of generating experiments from queries over
+  independent variables(s), executing experiments, and processing the results to
+  generate deliverables such as graphs and videos. It shifts the paradigm for
+  testing hypotheses from procedural (``Do these steps to answer the query'') to
+  declarative (``Here is the query to test---GO!''), reducing the burden on
+  researchers. It employs a modular architecture enabling easy customization and
+  extension for the needs of individual researchers, thereby eliminating manual
+  configuration and processing via throw-away scripts.  SIERRA improves
+  reproducibility of research by providing automation independent of the
+  execution environment (HPC hardware, real robots, etc.) and targeted platform
+  (simulator, real robots, etc.). This enables exact experiment replication, up
+  to the limit of the execution environment and platform, as well as making it
+  easy for researchers to test hypotheses in different computational
+  environments. Though SIERRA is targeted at robotics research, its design makes
+  it extendable to other fields.}
 }
 
-@article{Harwell:2018-partitioning,
+@inproceedings{Harwell:2023a-PBP,
+author = {Harwell, John and Lowmanstone, London and Gini, Maria},
+booktitle = {Proc. Int'l Conf. on Autonomous Agents and Multiagent Systems (AAMAS)},
+title = {A Lattice Model of 3D Environments For Provable Manipulation},
+year = {2023},
+nopublisher = {International Foundation for Autonomous Agents and Multiagent Systems},
+pages = {XX–YY},
+noseries = {AAMAS '23}
+abstract={We identify barriers to broader application of multi-robot systems to
+  construction and deconstruction tasks, which represent important real-world
+  problems such as repair of critical infrastructure of roads and levies after a
+  disaster. We frame these tasks as instances of the parallel bricklayer
+  problem, where independent agents must coordinate to concurrently manipulate
+  aspects of a 3D environment without deadlocks. Extracting desirable properties
+  of graphs representing natural 3D structures, we sketch a graphical
+  representation to model and reason about structures composed of discrete,
+  cuboid blocks.  We present a sample algorithm sketch on a non-trivial
+  structure utilizing our model.}
+}
+
+@inproceedings{Harwell:2022a-SIERRA,
+author = {Harwell, John and Lowmanstone, London and Gini, Maria},
+title = {{SIERRA}: A Modular Framework for Research Automation},
+year = {2022},
+isbn = {9781450392136},
+nopublisher = {International Foundation for Autonomous Agents and Multiagent Systems},
+noaddress = {Richland, SC},
+abstract = {Modern intelligent systems researchers form hypotheses about system behavior, and then run experiments using one or more independent variables to test their hypotheses. We present SIERRA, a novel framework structured around that idea for accelerating research developments and improving reproducibility of results. SIERRA makes it easy to quickly specify the independent variable(s) for an experiment, generate experimental inputs, automatically run the experiment, and process the results to generate deliverables such as graphs and videos. SIERRA provides reproducible automation independent of the execution environment (HPC hardware, real robots, etc.) and targeted platform (arbitrary simulator or real robots), enabling exact experiment replication (up to the limit of the execution environment and platform). It employs a deeply modular approach that allows easy customization and extension of automation for the needs of individual researchers, thereby eliminating manual experiment configuration and result processing via throw-away scripts.},
+booktitle = {Proc. Int'l Conf. on Autonomous Agents and Multiagent Systems (AAMAS)},
+pages = {1905–1907},
+numpages = {3},
+keywords = {simulation, real robots, research automation, scientific method},
+location = {Virtual Event, New Zealand},
+noseries = {AAMAS '22}
+}
+
+@misc{Harwell2022b-ODE,
+ archiveprefix = {arXiv},
+ author = {John Harwell and Angel Sylvester and Maria Gini},
+ eprint = {2110.12307},
+ primaryclass = {cs.RO},
+ howpublished={ arXiv:2110.12307v2 [cs.RO] },
+ title = {Characterizing The Limits of Linear Modeling of Non-Linear Swarm Behaviors},
+ year = {2022},
+ abstract={We study the limits of linear modeling of swarm behavior by characterizing the inflection point beyond which linear models of swarm collective behavior break down. The problem we consider is a central place object gathering task. We design a linear model which strives to capture the underlying dynamics of object gathering in robot swarms from first principles, rather than extensively relying on post-hoc model fitting. We evaluate our model with swarms of up to 8,000 robots in simulation, demonstrating that it accurately captures underlying swarm behavioral dynamics when the swarm can be approximated using the mean-field model, and when it cannot, and finite-size effects are present. We further apply our model to swarms exhibiting non-linear behaviors, and show that it still provides accurate predictions in some scenarios, thereby establishing better practical limits on linear modeling of swarm behaviors. }
+}
+
+@INPROCEEDINGS{Jeong2022a-graphs,
+author="Jeong, Minyoung
+and Harwell, John
+and Gini, Maria",
+editor="Ang Jr, Marcelo H.
+and Asama, Hajime
+and Lin, Wei
+and Foong, Shaohui",
+title="Analysis of Exploration in Swarm Robotic Systems",
+booktitle="Intelligent Autonomous Systems 16",
+year="2022",
+publisher="Springer International Publishing",
+address="Cham",
+pages="445--457",
+isbn="978-3-030-95892-3",
+abstract={The exploration time for a swarm of robots doing object gathering depends on the specific task, environment, number of objects, and number of robots. Hence, it is important to understand how different properties affect the exploration time. To address this practical challenge, we present a theoretical analysis of the expected exploration time for a swarm of robots that are searching for objects in an arena and present experimental results obtained with different swarm sizes. The experimental results are consistent with the theoretical analysis.}
+}
+
+@article{Harwell:2021a-metrics,
 author = {Harwell, John and Gini, Maria},
-file = {:home/jharwell/.local/share/data/Mendeley Ltd./Mendeley Desktop/Downloaded/Harwell, Gini - 2018 - Broadening applicability of swarm-robotic foraging through constraint relaxation.pdf:pdf},
-isbn = {9781538659748},
-journal = {IEEE Int'l Conf. on Simulation, Modeling, and Programming for Autonomous Robots (SIMPAR)},
-month = {May},
-pages = {116--122},
-publisher = {IEEE},
-title = {Broadening applicability of swarm-robotic foraging through constraint relaxation},
-year = {2018}
+journal = {IEEE Transactions on Robotics},
+title = {Improved Swarm Engineering: Aligning Intuition and Analysis},
+year = {2021},
+abstract={We present a set of metrics intended to supplement designer intuitions when
+  designing swarm-robotic systems to solve variants of object gathering
+  problems, increase accuracy in extrapolating swarm behavior from algorithmic
+  descriptions and small test experiments, and lead to faster and less costly
+  design cycles. We build on previous works studying self-organizing behaviors
+  in autonomous systems to derive a metric for swarm emergent self-organization.
+  We utilize techniques from high performance computing, time series analysis,
+  and queueing theory to derive metrics for swarm scalability, flexibility to
+  changing external environments, and robustness to internal system stimuli such
+  as sensor and actuator noise and robot failures.
+  We demonstrate the utility of our metrics by analyzing four different control
+  algorithms in two scenarios: an indoor warehouse object transport scenario
+  with static objects and a spatially unconstrained outdoor search and rescue
+  scenario with moving objects. In the spatially constrained warehouse scenario,
+  efficient use of space is key to success so algorithms that use mechanisms for
+  traffic regulation and congestion reduction are the most appropriate.  In the
+  search and rescue scenario, the same will happen with algorithms which can
+  cope well with object motion through dynamic task allocation and randomized
+  search trajectories. We show that our intuitions about comparative algorithm
+  performance are well supported by the quantitative results obtained using our
+  metrics, and that our metrics can be synergistically used together to predict
+  collective behaviors based on previous results in some cases.}
+}
+
+@inproceedings{Harwell:2020a-demystify,
+author = {Harwell, John and Lowmanstone, London and Gini, Maria},
+booktitle = {Proc. Int'l Conf. on Autonomous Agents and Multi-Agent Systems (AAMAS)},
+month = 5,
+nopublisher = {AAMAS},
+pages ={474--482},
+title = {Demystifying Emergent Intelligence And Its Effect On Performance In Large Robot Swarms},
+year = {2020},
+abstract = {We investigate the emergence of swarm intelligence using task allocation
+in large robot swarms. First, we compare task decomposition graphs of different
+levels of richness and measure the emergent intelligence arising from self-organized
+task allocation by deriving STOCH-N1, a stochastic allocation algorithm which
+contextualizes per-robot task allocation decisions based on a previous task's
+neighborhood within the graph. The results are compared to other state of the
+art algorithms. Second, we derive MAT-OPT: a greedy algorithm that optimally solves
+the swarm task allocation problem by representing the swarm's task allocation
+space as a matroid under some restrictive assumptions. We compare the MAT-OPT
+allocation method, which disregards task dependencies, with STOCH-N1, which emphasizes
+collective learning of graph structure (including dependencies). Results from
+an object gathering task show that swarm emergent intelligence (1) is sensitive
+to the richness of task decomposition graphs (2) is positively correlated with
+performance, (3) arises out of learning and exploitation of graph connectivity
+and structure, rather than graph content.}
+}
+
+@inproceedings{Harwell:2020b-aamasdc,
+ abstract = {Self-organized task allocation is possible with systems designed using the swarm robotic principles of scalability, flexibility, robustness, and emergence. We summarize (1) our derived quantitative measurements of these principles in 10,000 robot swarms, and (2) our task allocation work using stochastic choice and matroids. We propose extensions to our current task allocation methodology using stochastic processes and graph-theoretic topological invariants to provide a unified algorithmic approach to swarm-robotic foraging and construction.},
+ address = {Richland, SC},
+ author = {Harwell, John},
+ booktitle = {Proc. Int'l Conf. on Autonomous Agents and Multi-Agent Systems (AAMAS)},
+ month = 5,
+ nopublisher = {AAMAS},
+ keywords = {Construction, Stochastic Processes, Graph Theory, Task Allocation, Swarm Robotics, Foraging},
+ pages = {2191–2192},
+ title = {A Theoretical Framework for Self-Organized Task Allocation in Large Swarms ({D}octoral {C}onsortium)},
+ year = {2020},
+ abstract={  Self-organized task allocation is possible with systems designed using the swarm
+  robotic principles of scalability, flexibility, robustness, and emergence. We
+  summarize (1) our derived quantitative measurements of these principles in 10,000
+  robot swarms, and (2) our task allocation work using stochastic choice and
+  matroids. We propose extensions to our current task allocation methodology using
+  stochastic processes and graph-theoretic topological invariants to provide a
+  unified algorithmic approach to swarm-robotic foraging and construction.}
+}
+
+
+
+@inproceedings{Harwell:2019a-metrics,
+  title     = {Swarm Engineering Through Quantitative Measurement of Swarm Robotic Principles in a 10,000 Robot Swarm},
+  author    = {Harwell, John and Gini, Maria},
+  booktitle = {Proc. 28th Int'l Joint Conf. on
+               Artificial Intelligence (IJCAI-19)},
+  nopublisher = {International Joint Conferences on Artificial Intelligence Organization},
+  pages     = {336--342},
+  year      = {2019},
+  month     = 7,
+  nodoi       = {10.24963/ijcai.2019/48},
+  nourl       = {https://doi.org/10.24963/ijcai.2019/48},
+  abstract={When designing swarm-robotic systems, systematic comparison of algorithms from
+  different domains is necessary to determine which is capable of scaling up to
+  handle the target problem size and target operating conditions. We propose a set of
+  quantitative metrics for scalability, flexibility, and emergence which are capable
+  of addressing these needs during the system design process. We demonstrate the
+  applicability of our proposed metrics as a design tool by solving a large object
+  gathering problem in temporally varying operating conditions using iterative
+  hypothesis evaluation. We provide experimental results obtained in simulation for
+  swarms of over 10,000 robots.}
 }
 
 @inproceedings{Harwell:2019b-ijcaidc,
@@ -35,70 +197,67 @@ year = {2018}
   month     = {7},
   nodoi       = {10.24963/ijcai.2019/908},
   nourl       = {https://doi.org/10.24963/ijcai.2019/908},
-}
-@inproceedings{Harwell:2019a-metrics,
-  title     = {Swarm Engineering Through Quantitative Measurement of Swarm Robotic Principles in a 10,000 Robot Swarm},
-  author    = {Harwell, John and Gini, Maria},
-  booktitle = {Proc. Twenty-Eighth Int'l Joint Conference on
-               Artificial Intelligence, {IJCAI-19}},
-  nopublisher = {International Joint Conferences on Artificial Intelligence Organization},
-  pages     = {336--342},
-  year      = {2019},
-  month     = aug,
-  nodoi       = {10.24963/ijcai.2019/48},
-  nourl       = {https://doi.org/10.24963/ijcai.2019/48},
+  abstract={Automation in construction is possible with systems designed using the swarm
+  robotic principles of scalability, flexibility, robustness, and emergence. We
+  derive quantitative measurements of these principles in 10,000 robot swarms as a
+  first step in achieving this goal. We summarize our recent task allocation work in
+  the context of an object gathering task and demonstrate its feasibility in the
+  context of automated construction tasks. We present a trajectory to extend our
+  current task allocation methodology using stochastic processes in order to present
+  a unified approach to task allocation in swarm-robotic construction.}
 }
 
-@inproceedings{Harwell:2020a-demystify,
-author = {Harwell, John and Lowmanstone, London and Gini, Maria},
-booktitle = AAMAS,
-month = {May},
-nopublisher = {AAMAS},
-pages ={474--482},
-title = {Demystifying Emergent Intelligence And Its Effect On Performance In Large Robot Swarms},
-year = {2020}
+@misc{White:2019a-social,
+      title={Socially Inspired Communication in Swarm Robotics},
+      author={White, Nathan and Harwell, John and Gini, Maria},
+      year={2019},
+      booktitle={arXiv:1906.01108 [cs.RO]},
+      url={http://arxiv.org/abs/1906.01108},
+      abstract={Localized communication in swarms has been shown to increase swarm effectiveness in some situations by allowing for additional opportunities for cooperation. However, communication and utilization of potentially outdated information is also a concern. We present an explicit non-directional goal-based communication model and message accept/reject scheme, and test our model in a set of object gathering experiments with a swarm of robots. The results of the experiments indicate that even low levels of communication regarding the swarm's goal outperform high levels of random information communication. }
 }
-@inproceedings{Harwell:2020b-aamasdc,
- abstract = {Self-organized task allocation is possible with systems designed using the swarm robotic principles of scalability, flexibility, robustness, and emergence. We summarize (1) our derived quantitative measurements of these principles in 10,000 robot swarms, and (2) our task allocation work using stochastic choice and matroids. We propose extensions to our current task allocation methodology using stochastic processes and graph-theoretic topological invariants to provide a unified algorithmic approach to swarm-robotic foraging and construction.},
- address = {Richland, SC},
- author = {Harwell, John},
- booktitle = {AAMAS},
- nomonth = {May},
- nopublisher = {AAMAS},
- keywords = {Construction, Stochastic Processes, Graph Theory, Task Allocation, Swarm Robotics, Foraging},
- pages = {2191–2192},
- title = {A Theoretical Framework for Self-Organized Task Allocation in Large Swarms ({D}octoral {C}onsortium)},
- year = {2020},
+@misc{Chen:2019a-battery,
+      title={Maximizing Energy Battery Efficiency in Swarm Robotics},
+      author={Chen, Anthony and Harwell, John and Gini, Maria},
+      year={2019},
+      booktitle={arXiv:1906.01957 [cs.MA]},
+      url={http://arxiv.org/abs/1906.01957},
+      abstract={ Miniaturization and cost, two of the main attractive factors of swarm robotics, have motivated its use as a solution in object collecting tasks, search & rescue missions, and other applications. However, in the current literature only a few papers consider energy allocation efficiency within a swarm. Generally, robots recharge to their maximum level every time unconditionally, and do not incorporate estimates of the energy needed for their next task. In this paper we present an energy efficiency maximization method that minimizes the overall energy cost within a swarm while simultaneously maximizing swarm performance on an object gathering task. The method utilizes dynamic thresholds for upper and lower battery limits. This method has also shown to improve the efficiency of existing energy management methods. }
 }
 
-@article{Harwell:2021a-metrics,
+@inproceedings{Harwell:2018a-partitioning,
 author = {Harwell, John and Gini, Maria},
-journal = {IEEE Transactions on Robotics},
-title = {{Improved Swarm Engineering: Aligning Intuition and Analysis}},
-year = {2021}
+isbn = {9781538659748},
+journal = {IEEE Int'l Conf. on Simulation, Modeling, and Programming for Autonomous Robots (SIMPAR)},
+month = {5},
+pages = {116--122},
+publisher = {IEEE},
+title = {Broadening applicability of swarm-robotic foraging through constraint relaxation},
+year = {2018},
+abstract={Swarm robotics (SR) offers promising solutions to real-world problems that can be modeled as
+  foraging tasks, e.g. disaster/trash cleanup or object gathering for construction. Yet current SR
+  foraging approaches make limiting assumptions that restrict their applicability to selected
+  real-world environments. We propose an improved self-organized task allocation method based on
+  task partitioning that removes restrictions such as: (1) \emph{a priori} knowledge of foraging
+  environment, and (2) strict limitations on intermediate drop/pickup site behavior. With
+  experiments in simulation, we show that under the proposed constraint relaxation, our approach
+  still provides performance increases when compared to an unpartitioned strategy within some
+  combinations of swarm sizes, robot capabilities, and environmental conditions.  This work
+  broadens the applicability of SR foraging approaches, showing that they can be effective under
+  ideal conditions while continuing to perform robustly in more volatile/challenging environments.}
 }
 
-@misc{Harwell:2021a-ODE,
- archiveprefix = {arXiv},
- author = {John Harwell and Angel Sylvester and Maria Gini},
- eprint = {2110.12307},
- primaryclass = {cs.RO},
- title = {Characterizing The Limits of Linear Modeling of Non-Linear Swarm Behaviors},
- year = {2021}
-}
 
-@inproceedings{Harwell:2022a-SIERRA,
-author = {Harwell, John and Lowmanstone, London and Gini, Maria},
-title = {SIERRA: A Modular Framework for Research Automation},
-year = {2022},
-isbn = {9781450392136},
-nopublisher = {International Foundation for Autonomous Agents and Multiagent Systems},
-noaddress = {Richland, SC},
-abstract = {Modern intelligent systems researchers form hypotheses about system behavior, and then run experiments using one or more independent variables to test their hypotheses. We present SIERRA, a novel framework structured around that idea for accelerating research developments and improving reproducibility of results. SIERRA makes it easy to quickly specify the independent variable(s) for an experiment, generate experimental inputs, automatically run the experiment, and process the results to generate deliverables such as graphs and videos. SIERRA provides reproducible automation independent of the execution environment (HPC hardware, real robots, etc.) and targeted platform (arbitrary simulator or real robots), enabling exact experiment replication (up to the limit of the execution environment and platform). It employs a deeply modular approach that allows easy customization and extension of automation for the needs of individual researchers, thereby eliminating manual experiment configuration and result processing via throw-away scripts.},
-booktitle = {Proc. Int'l Conf. on Autonomous Agents and Multiagent Systems (AAMAS)},
-pages = {1905–1907},
-numpages = {3},
-keywords = {simulation, real robots, research automation, scientific method},
-location = {Virtual Event, New Zealand},
-noseries = {AAMAS '22}
+
+@article{Basagaoglu:2017a-LBM,
+abstract = {This paper reports, for the first time, the computational performance of SequenceL for mesoscale simulations of large numbers of particles in a microfluidic device via the lattice-Boltzmann method. The performance of SequenceL simulations was assessed against the optimized serial and parallelized (via OpenMP directives) FORTRAN90 simulations. At present, OpenMP directives were not included in inter-particle and particle–wall repulsive (steric) interaction calculations due to difficulties that arose from inter-iteration dependencies between consecutive iterations of the do-loops. SequenceL simulations, on the other hand, relied on built-in automatic parallelism. Under these conditions, numerical simulations revealed that the parallelized FORTRAN90 outran the performance of SequenceL by a factor of 2.5 or more when the number of particles was 100 or less. SequenceL, however, outran the performance of the parallelized FORTRAN90 by a factor of 1.3 when the number of particles was 300. Our results show that when the number of particles increased by 30-fold, the computational time of SequenceL simulations increased linearly by a factor of 1.5, as compared to a 3.2-fold increase in serial and a 7.7-fold increase in parallelized FORTRAN90 simulations. Considering SequenceL's efficient built-in parallelism that led to a relatively small increase in computational time with increased number of particles, it could be a promising programming language for computationally-efficient mesoscale simulations of large numbers of particles in microfluidic experiments.},
+author = {Başağaoğlu, Hakan and Blount, Justin and Blount, Jarred and Nelson, Bryant and Succi, Sauro and Westhart, Phil M. and Harwell, John R.},
+nodoi = {10.1016/j.cpc.2016.12.012},
+file = {:home/jharwell/.local/share/data/Mendeley Ltd./Mendeley Desktop/Downloaded/Başağaoğlu et al. - 2017 - Computational performance of SequenceL coding of the lattice Boltzmann method for multi-particle flow simu.pdf:pdf},
+issn = {00104655},
+journal = {Computer Physics Communications},
+keywords = {Computational methods in fluid dynamics,Hydrodynamics,Lattice-Boltzmann,SequenceL},
+pages = {92--99},
+title = {{Computational performance of SequenceL coding of the lattice Boltzmann method for multi-particle flow simulations}},
+volume = {213},
+year = {2017}
 }
